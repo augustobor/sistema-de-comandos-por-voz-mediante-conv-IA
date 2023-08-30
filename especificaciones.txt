@@ -1,9 +1,8 @@
-En esta versión el proyecto IA utiliza transfer learning pasando del dominio 1 
-del dataset en ingles de google speech commands al dominio donde hay palabras en español. 
+En esta versión se realizo un transfer learning a todas las capas. Un nuevo 
+entrenamiento a todo el modelo IA
 
-También se re ejecutó nuevamente el transfer antes de exportar el modelo a C, lo cual provocó que 
-llegue a un excelente acc en Python pero no se generaliza como modelo.
+- Se re entreno con poco más de 100 muestras de audio entre las 3 clases
 
-Se re entrenaron las últimas 2 capas de salida y se tuvo un acc de 100%. De todos modos es un resultado 
-poco creible debido a la cantidad de muestras y al re entrenamiento de todo el modelo nuevamente después de
-hacer transfer learning (mucho overfit)
+- Según colab existe un acc de 95% y error minimo del 0.07. Sin embargo empiricamente no coinciden
+por lo que no es un modelo generalizado. Hace falta mayor generalización del modelo y se busca un 
+mejor modelo

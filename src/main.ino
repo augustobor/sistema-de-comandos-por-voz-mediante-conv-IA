@@ -7,7 +7,6 @@
 /* Declaración de constantes */
 #define SENSOR_PIN 34
 #define BOTON_PIN 5
-#define OUTPUT_PIN 15
 
 /* Prototipos de funciones */
 void grabar_audio(void);
@@ -36,8 +35,8 @@ void setup() {
   digitalWrite(LED_BUILTIN, LOW);
   pinMode(SENSOR_PIN, INPUT);
   pinMode(BOTON_PIN, INPUT);
-  pinMode(OUTPUT_PIN, OUTPUT);
-  digitalWrite(OUTPUT_PIN, LOW);
+
+  //Configuración de los pines para el manejo de la valvula
   delay(1000);
 
 }
@@ -62,6 +61,7 @@ void loop() {
 
   tiempo = micros() - tiempo;
   
+
   Serial.print("Dijiste: ");
   Serial.println(predicciones[prediccion]);
 
@@ -75,12 +75,6 @@ void loop() {
   
   Serial.println();
   
-  if(!strcmp(predicciones[prediccion], "mate")) {
-    digitalWrite(OUTPUT_PIN, HIGH);
-    delay(1000);
-    digitalWrite(OUTPUT_PIN, LOW);
-  }
-
   delay(2000);
 }
 
