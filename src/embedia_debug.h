@@ -5,7 +5,7 @@
 
 // exporter must define EMBEDIA_DEBUG macro
 // 0 => NO DEBUG, 1 => DATA HEADER, 2 => DATA CONTENT
-#define EMBEDIA_DEBUG 0
+#define EMBEDIA_DEBUG 2
 
 
 

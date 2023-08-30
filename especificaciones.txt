@@ -1,9 +1,10 @@
 En esta versión se realizo un transfer learning a todas las capas. Un nuevo 
 entrenamiento a todo el modelo IA
 
-- Se re entreno con poco más de 100 muestras de audio entre las 3 clases
+- Se realizó el transfer a 4 capas desde la salida. Llegando a tener un acc de +90%
 
-- Según colab existe un acc de 95% y error minimo del 0.07. Sin embargo empiricamente no coinciden
-por lo que no es un modelo generalizado. Hace falta mayor generalización del modelo y se busca un 
-mejor modelo. Ademas se realizó el transfer a TODOS los layers del modelo lo cuál debe generar un overfit 
-a todo el modelo
+    - De todos modos este acc es dudoso por la falta de generalización del dataset. De todos modos hay
+    buenos resultados respecto a otras versiones
+
+    - Se recomienda ampliar el dataset original y buscar nuevamente un mejor modelo más abstracto. 
+    Solamente se están entrenando con 80 muestras de 3 clases
